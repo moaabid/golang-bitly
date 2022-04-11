@@ -1,0 +1,31 @@
+GET http://localhost:3000/getallbitlies Http/1.1
+
+###
+GET http://localhost:3000/getbitly/1 Http/1.1
+
+
+
+###
+POST http://localhost:3000/createbitly Http/1.1
+Content-Type:  application/json
+
+{
+    "bitly": "",
+    "redirect": "https://golang.org/",
+    "random" : true
+}
+
+
+###
+PATCH  http://localhost:3000/updatebitly Http/1.1
+Content-Type:  application/json
+
+{
+    "id": 1,
+    "bitly": "golang-org",
+    "redirect": "https://golang.org/",
+    "random" : false
+}
+
+###
+DELETE  http://localhost:3000/deletebitly/1 Http/1.1
